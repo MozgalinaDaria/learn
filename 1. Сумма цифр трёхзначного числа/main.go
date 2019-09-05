@@ -1,7 +1,7 @@
 package main
 
-import "./dexes/console"
-import "./dexes/rand"
+import "../dexes/console"
+import "../dexes/rand"
 
 func main() {
 	var number int
@@ -14,6 +14,6 @@ func main() {
 	numeral3 = number % 10
 
 	console.Writeln("Получившееся трехзначное число: ", number)
-	console.Writeln("Сумма трех чисел: ", numeral1 + numeral2 + numeral3)
-	console.Writeln("Произведение трех чисел: ", numeral1 * numeral2 * numeral3)
+	console.Writeln("Сумма трех чисел: ", numeral1+numeral2+numeral3)
+	console.Writeln("Произведение трех чисел: ", numeral1*numeral2*numeral3)
 }
