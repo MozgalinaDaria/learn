@@ -4,14 +4,14 @@ import "fmt"
 
 func ReadString() string {
 	var result string
-	fmt.Scanf("%s", &result)
+	fmt.Scan(&result)
 
 	return result
 }
 
 func ReadInt() int {
 	var result int
-	fmt.Scanf("%d", &result)
+	fmt.Scan(&result)
 
 	return result
 }
