@@ -1,12 +1,17 @@
 package main
 
-import "./dexes"
+import "./dexes/console"
 
 
 func main() {
 	var name string
+	var age int
 
-	dexes.Write("Enter your name: ")
-	name = dexes.ReadString()
-	dexes.Writeln("Hello, ", name)
+	console.Write("Enter your name: ")
+	name = console.ReadString()
+	console.Writeln("Hello, ", name)
+
+	console.Write("Enter your age: ")
+	age = console.ReadInt()
+	console.Writeln("Really?", age, "?")
 }

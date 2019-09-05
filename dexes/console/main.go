@@ -1,10 +1,17 @@
-package dexes
+package console
 
 import "fmt"
 
 func ReadString() string {
 	var result string
-	fmt.Scanln(&result)
+	fmt.Scanf("%s", &result)
+
+	return result
+}
+
+func ReadInt() int {
+	var result int
+	fmt.Scanf("%d", &result)
 
 	return result
 }
