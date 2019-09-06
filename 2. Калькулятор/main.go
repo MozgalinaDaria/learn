@@ -1,11 +1,13 @@
 package main
 
-import "../dexes/console"
+import (
+	"../dexes/console"
+)
 
-func main () {
+func main() {
 	var a, b, result int
 	var operation string
-	var isSum, isDifference, isMultiple bool
+	var isSum, isDifference, isMultiple, isDivision bool
 
 	console.Write("Введите первое число: ")
 	a = console.ReadInt()
@@ -22,13 +24,25 @@ func main () {
 
 	if isSum {
 		result = a + b
-	} else if isDifference {
-		result = a - b
-	} else if isMultiple {
-		result = a * b
-	} else {
-		result = a / b
+		console.Write("Результат вычислений: ", a, " ", operation, " ", b, " = ", result)
+		return
 	}
 
-	console.Write("Результат вычислений: ", result)
+	if isDifference {
+		result = a - b
+		console.Write("Результат вычислений: ", a, " ", operation, " ", b, " = ", result)
+		return
+	}
+
+	if isMultiple {
+		result = a * b
+		console.Write("Результат вычислений: ", a, " ", operation, " ", b, " = ", result)
+		return
+	}
+
+	if isDivision {
+		result = a / b
+		console.Write("Результат вычислений: ", a, " ", operation, " ", b, " = ", result)
+		return
+	}
 }
