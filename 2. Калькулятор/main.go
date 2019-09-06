@@ -5,9 +5,8 @@ import (
 )
 
 func main() {
-	var a, b, result int
+	var a, b int
 	var operation string
-	var isSum, isDifference, isMultiple bool
 
 	console.Write("Введите первое число: ")
 	a = console.ReadInt()
@@ -18,23 +17,45 @@ func main() {
 	console.Write("Введите второе число: ")
 	b = console.ReadInt()
 
-	isSum = operation == "+"
-	isDifference = operation == "-"
-	isMultiple = operation == "*"
-
-	if isSum {
-		result = a + b
-	} else if isDifference {
-		result = a - b
-	} else if isMultiple {
-		result = a * b
-	} else {
-		result = a / b
+	if operation == "+" {
+		Output(a, operation, b, Sum(a, b))
+		return
 	}
 
-	Output(a, operation, b, result)
+	if operation == "-" {
+		Output(a, operation, b, Difference(a, b))
+		return
+	}
+
+	if operation == "*" {
+		Output(a, operation, b, Multiple(a, b))
+		return
+	}
+
+	if operation == "/" {
+		Output(a, operation, b, Division(a, b))
+		return
+	}
+
+	console.Writeln("Введен некорректный знак операции")
 }
 
 func Output(first int, operation string, second int, result int) {
 	console.Writeln(first, operation, second, "=", result)
+}
+
+func Sum(a, b int) int {
+	return a + b
+}
+
+func Difference(a, b int) int {
+	return a - b
+}
+
+func Multiple(a, b int) int {
+	return a * b
+}
+
+func Division(a, b int) int {
+	return a / b
 }
