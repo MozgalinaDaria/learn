@@ -7,7 +7,7 @@ import (
 func main() {
 	var a, b, result int
 	var operation string
-	var isSum, isDifference, isMultiple, isDivision bool
+	var isSum, isDifference, isMultiple bool
 
 	console.Write("Введите первое число: ")
 	a = console.ReadInt()
@@ -24,25 +24,17 @@ func main() {
 
 	if isSum {
 		result = a + b
-		console.Write("Результат вычислений: ", a, " ", operation, " ", b, " = ", result)
-		return
-	}
-
-	if isDifference {
+	} else if isDifference {
 		result = a - b
-		console.Write("Результат вычислений: ", a, " ", operation, " ", b, " = ", result)
-		return
-	}
-
-	if isMultiple {
+	} else if isMultiple {
 		result = a * b
-		console.Write("Результат вычислений: ", a, " ", operation, " ", b, " = ", result)
-		return
+	} else {
+		result = a / b
 	}
 
-	if isDivision {
-		result = a / b
-		console.Write("Результат вычислений: ", a, " ", operation, " ", b, " = ", result)
-		return
-	}
+	Output(a, operation, b, result)
+}
+
+func Output(first int, operation string, second int, result int) {
+	console.Writeln(first, operation, second, "=", result)
 }
