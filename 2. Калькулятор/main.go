@@ -5,6 +5,7 @@ import "../dexes/console"
 func main () {
 	var a, b, result int
 	var operation string
+	var isSum, isDifference, isMultiple bool
 
 	console.Write("Введите первое число: ")
 	a = console.ReadInt()
@@ -15,11 +16,15 @@ func main () {
 	console.Write("Введите второе число: ")
 	b = console.ReadInt()
 
-	if operation == "+" {
+	isSum = operation == "+"
+	isDifference = operation == "-"
+	isMultiple = operation == "*"
+
+	if isSum {
 		result = a + b
-	} else if operation == "-" {
+	} else if isDifference {
 		result = a - b
-	} else if operation == "*" {
+	} else if isMultiple {
 		result = a * b
 	} else {
 		result = a / b
