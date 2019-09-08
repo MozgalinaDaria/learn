@@ -16,6 +16,13 @@ func ReadInt() int {
 	return result
 }
 
+func ReadFloat() float64 {
+	var result float64
+	fmt.Scan(&result)
+
+	return result
+}
+
 func Write(a ...interface{}) {
 	fmt.Print(a...)
 }
