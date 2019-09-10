@@ -4,18 +4,25 @@ import "../dexes/console"
 
 func main () {
 	var first, second int
+	var oddness bool
 
 	console.Writeln("Последовательно введите четное и нечетное число:")
 	first = console.ReadInt()
 	second = console.ReadInt()
 
-	// 1011 | 1 = 1011
-	// 1000 | 1 = 1001
-	if first | 1 == first {
+	oddness = isOdd(first)
+
+	if oddness {
 		console.Write("Нечетное число = ", first)
 		return
+}
+	console.Write("Нечетное число = ", second)
+
+	func isOdd(number int) bool {
+
+		return (number | 1) == number
 	}
 
 
-	console.Write("Нечетное число = ", second)
+
 }
