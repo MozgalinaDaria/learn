@@ -14,13 +14,13 @@ func main() {
 }
 
 func max(a, b, c int) int {
-	if a > b {
-		if a > c {
-			return a
-		}
-
-		return c
+	if a > b && a > c {
+		return a
 	}
 
-	return b
+	if b > c {
+		return b
+	}
+
+	return c
 }
