@@ -2,21 +2,27 @@ package main
 
 import "../dexes/console"
 
+const Square  = 1
+const Rectangle = 2
+const Triangle = 3
+const Circle = 4
+
 func main() {
 	var number int
 
-	console.Writeln("Введите номер фигуры (1 - квадрат, 2 - прямоугольник, 3 - треугольник, 4 - круг)")
+	console.Writeln("Введите номер фигуры: ", Square, " - квадрат, ", Rectangle, " - прямоугольник, ", Triangle, " - треугольник, ",
+	Circle, " - круг")
 	number = console.ReadInt()
 
-	console.Writeln("Вами выбран ", number)
+	console.Write("Вами выбран ")
 	switch number {
-	case 1:
-		console.Writeln("Квадрат")
-	case 2:
-		console.Writeln("Прямоугольник")
-	case 3:
-		console.Writeln("Треугольник")
-	case 4:
-		console.Writeln("Круг")
+	case Square:
+		console.Write("квадрат")
+	case Rectangle:
+		console.Write("прямоугольник")
+	case Triangle:
+		console.Write("треугольник")
+	case Circle:
+		console.Write("круг")
 	}
 }
