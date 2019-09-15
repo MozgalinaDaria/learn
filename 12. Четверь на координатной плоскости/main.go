@@ -2,6 +2,10 @@ package main
 
 import "../dexes/console"
 
+// TODO Вынести определение четверти в отдельную функцию func DetectPosition(x, y int) int
+// TODO Функция должна возвращать константы (своя константа для каждой ситуации)
+// TODO func должна определять что вывести пользователю через switch/case
+
 func main() {
 	var x, y int
 
