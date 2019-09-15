@@ -1,7 +1,7 @@
 package main
 
-import "../dexes/console"
-import "../dexes/rand"
+import "../base/console"
+import "../base/rand"
 
 func main() {
 	var number int

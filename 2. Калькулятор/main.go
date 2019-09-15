@@ -1,7 +1,7 @@
 package main
 
 import (
-	"../dexes/console"
+	"../base/console"
 )
 
 func main() {

@@ -1,6 +1,6 @@
 package main
 
-import "../dexes/console"
+import "../base/console"
 import "math"
 
 func main() {
@@ -29,9 +29,9 @@ func main() {
 	console.Writeln("Точка не принадлежит окружности")
 }
 
-func getDistance (x1, y1, x2, y2 float64) float64 {
+func getDistance(x1, y1, x2, y2 float64) float64 {
 	var distanceSquared float64
 
-	distanceSquared = (x1-x2) * (x1-x2) + (y1-y2) * (y1-y2)
-	return math.Pow (distanceSquared, 0.5)
+	distanceSquared = (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2)
+	return math.Pow(distanceSquared, 0.5)
 }

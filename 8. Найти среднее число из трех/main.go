@@ -1,8 +1,8 @@
 package main
 
-import "../dexes/console"
+import "../base/console"
 
-func main()  {
+func main() {
 	var a, b, c int
 
 	console.Writeln("Введите 3 числа")

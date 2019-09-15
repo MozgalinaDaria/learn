@@ -1,6 +1,6 @@
 package main
 
-import "../dexes/console"
+import "../base/console"
 
 // TODO Вынести определение четверти в отдельную функцию func DetectPosition(x, y int) int
 // TODO Функция должна возвращать константы (своя константа для каждой ситуации)

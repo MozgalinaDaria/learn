@@ -1,6 +1,6 @@
 package main
 
-import "../dexes/console"
+import "../base/console"
 
 func main() {
 	var a, b, c int

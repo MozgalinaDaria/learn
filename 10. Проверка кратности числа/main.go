@@ -1,6 +1,6 @@
 package main
 
-import "../dexes/console"
+import "../base/console"
 
 func main() {
 	var a, b int
@@ -23,5 +23,5 @@ func main() {
 }
 
 func isMultiplicity(a, b int) bool {
-	return a % b == 0
+	return a%b == 0
 }
