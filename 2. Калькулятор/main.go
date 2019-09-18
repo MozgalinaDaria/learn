@@ -8,14 +8,9 @@ func main() {
 	var a, b int
 	var operation string
 
-	console.Write("Введите первое число: ")
-	a = console.ReadInt()
-
-	console.Write("Введите знак требуемой операции: ")
-	operation = console.ReadString()
-
-	console.Write("Введите второе число: ")
-	b = console.ReadInt()
+	a = console.ReadInt("Введите первое число: ")
+	operation = console.ReadString("Введите знак требуемой операции: ")
+	b = console.ReadInt("Введите второе число: ")
 
 	if operation == "+" {
 		Output(a, operation, b, Sum(a, b))
