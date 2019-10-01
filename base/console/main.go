@@ -2,21 +2,33 @@ package console
 
 import "fmt"
 
-func ReadString() string {
+func ReadString(a ...interface{}) string {
+	if len(a) > 0 {
+		Write(a...)
+	}
+
 	var result string
 	fmt.Scan(&result)
 
 	return result
 }
 
-func ReadInt() int {
+func ReadInt(a ...interface{}) int {
+	if len(a) > 0 {
+		Write(a...)
+	}
+
 	var result int
 	fmt.Scan(&result)
 
 	return result
 }
 
-func ReadFloat() float64 {
+func ReadFloat(a ...interface{}) float64 {
+	if len(a) > 0 {
+		Write(a...)
+	}
+
 	var result float64
 	fmt.Scan(&result)
 
