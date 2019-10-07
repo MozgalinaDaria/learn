@@ -14,7 +14,8 @@ func main(){
 	if n == 2 {
 		console.Write("3 верблюда, 4 барана, 5 тараканов")
 		return
-	} else {
-		console.Write("Решений нет")
 	}
+
+	console.Write("Решений нет")
+
 }
