@@ -1,9 +1,7 @@
 package main
 
-import (
+import
 	"../base/console"
-
-)
 
 func main(){
 	var x, y float64
