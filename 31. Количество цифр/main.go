@@ -9,7 +9,7 @@ func main() {
 	var number, even, odd int
 	number = int(math.Abs(console.ReadFloat("Введите число: ")))
 
-	for ; number % 10 >= 1; number = number / 10 {
+	for ; number != 0; number = number / 10 {
 		figure := number % 10
 
 		if figure % 2 == 0 {
