@@ -3,6 +3,8 @@ package main
 import "../base/console"
 
 func main() {
+	var NewNumber int
+
 	number:= console.ReadInt("Назовите число: ")
 	degree:= console.ReadInt("Назовите степень, в которую нужно возвести ", number, ": ")
 
@@ -12,14 +14,15 @@ func main() {
 	}
 	if degree != 0 {
 		console.Write(number, " в степени ", degree, " = ")
+		NewNumber = number
 		for i:= 0; i <= degree - 2; i++ {
-			number *= number
+			NewNumber *= number
 		}
 		if degree > 0 {
-			console.Write(number)
+			console.Write(NewNumber)
 		}
 		if degree < 0 {
-			console.Write("1/", number)
+			console.Write("1/", NewNumber)
 		}
 	}
 }
