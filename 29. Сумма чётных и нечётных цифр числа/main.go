@@ -9,9 +9,8 @@ func main()  {
 	var number, figure, sumOfEven, sumOfOdd int
 
 	number = console.ReadInt("Введите число: ")
-	for i:= 0; number != 0; i++{
+	for ; number != 0; number = number / 10{
 		figure = number % 10
-		number = number / 10
 		if figure % 2 == 0{
 			sumOfEven = sumOfEven + figure
 		} else {
