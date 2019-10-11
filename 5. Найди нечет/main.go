@@ -5,7 +5,7 @@ import "../base/console"
 func main() {
 	var first, second int
 
-	console.Writeln("Последовательно введите четное и нечетное число:")
+	console.Writeln("Введите 2 числа с разной четностью: ")
 	first = console.ReadInt()
 	second = console.ReadInt()
 

@@ -5,15 +5,14 @@ import "../base/console"
 func main() {
 	var year int
 
-	console.Writeln("Введите год")
-	year = console.ReadInt()
+	year = console.ReadInt("Введите год")
 
 	if isLeap(year) {
-		console.Writeln("Год ", year, " - високосный")
+		console.Writeln("Год ", year, " - високосный, в нем  365 дней")
 		return
 	}
 
-	console.Writeln("Год ", year, " - невисокосный")
+	console.Writeln("Год ", year, " - невисокосный, в нем 366 дней")
 }
 
 func isLeap(year int) bool {

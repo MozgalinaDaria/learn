@@ -7,12 +7,9 @@ func main() {
 	var a, b, c, doubleA, negativeB, discriminant, rootOfDiscriminant float64
 	var xFirst, xSecond float64
 
-	console.Write("Введите a: ")
-	a = console.ReadFloat()
-	console.Write("Введите b: ")
-	b = console.ReadFloat()
-	console.Write("Введите c: ")
-	c = console.ReadFloat()
+	a = console.ReadFloat("Введите a: ")
+	b = console.ReadFloat("Введите b: ")
+	c = console.ReadFloat("Введите c: ")
 
 	discriminant = Discriminant(a, b, c)
 	if discriminant < 0 {
@@ -36,5 +33,5 @@ func main() {
 }
 
 func Discriminant(a, b, c float64) float64 {
-	return b*b - 4*a*c
+	return b * b - 4 * a * c
 }
