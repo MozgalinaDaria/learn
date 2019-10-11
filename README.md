@@ -228,6 +228,15 @@ x<sub>2</sub>, y<sub>2</sub>, width<sub>2</sub>, height<sub>2</sub>)
 Ввод: N - число, K - цифра.    
 Вывод: число N с удалёнными из него цифрами K.
 
+1. **Иероглифы**    
+[timus#1545](http://acm.timus.ru/problem.aspx?num=1545)
+
+1. **Спамер**    
+[timus#1496](http://acm.timus.ru/problem.aspx?num=1496)
+
+1. **Степень**    
+[timus#1110](http://acm.timus.ru/problem.aspx?num=1110)
+
 1. **Сумма первой и последней цифр числа**    
 Ввод: число.    
 Вывод: сумма первой и последней цифр числа.
