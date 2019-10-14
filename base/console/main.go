@@ -13,6 +13,17 @@ func ReadString(a ...interface{}) string {
 	return result
 }
 
+func ReadChar(a ...interface{}) rune {
+	if len(a) > 0 {
+		Write(a...)
+	}
+
+	var result rune
+	fmt.Scan(&result)
+
+	return result
+}
+
 func ReadInt(a ...interface{}) int {
 	if len(a) > 0 {
 		Write(a...)

@@ -14,8 +14,7 @@ func main() {
 
 	var startTime = time.Now()
 	for i := 10; i <= number; i++ {
-
-		sumFromTenCycle = sumFromTenCycle + i
+		sumFromTenCycle += i
 	}
 	var endTime  =  time.Since(startTime)
 
