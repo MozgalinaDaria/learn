@@ -1,18 +1,34 @@
 package main
 
 import (
-	"log"
-	"time"
+	"./base/console"
+	"unicode/utf8"
 )
-
 func main() {
-	start := time.Now()
+	//	var number string
+	//	var length int
+	//	var figureToRemove rune
+	//	var runes []rune
+	//
+	//	number = console.ReadString("Введите число: ")
+	//	figureToRemove = console.ReadChar("Введите цифру, которую нужно удалить из числа: ")
+	//
+	//	length = len(number)
+	//	runes, length = utf8.DecodeRuneInString(number)
+	//	for i := 0; i < length; i++ {
+	//		if runes[i] == figureToRemove {
+	//			console.Write("")
+	//		}
+	//	}
 
-	a := 0
-	for i := 0; i < 10000000000; i++ {
-		if a == 0 {
-		} else {}
+	str :=  "bd фыва"
+
+	for len(str) > 0 {
+		r, size := utf8.DecodeRuneInString(str)
+		console.Writeln(str)
+		console.Writeln(string(r), size)
+		console.Writeln()
+
+		str = str[size:]
 	}
-
-	log.Printf("Binomial took %s", time.Since(start))
 }
