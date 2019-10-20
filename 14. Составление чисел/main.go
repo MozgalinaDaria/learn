@@ -4,7 +4,7 @@ import "../base/console"
 
 func main() {
 	var number, figure3, figure2, figure1 int
-	console.Writeln("Введите любое трехзначное число")
+	console.Writeln("Введите любое трехзначное число: ")
 	number = console.ReadInt()
 
 	figure1, figure2, figure3 = GetFigure(number)

@@ -18,12 +18,20 @@ func main(){
 
 	letter = console.ReadString("Введите букву, на которую искать: ")
 
-	console.Writeln("Строки, начинающиеся с ", letter, ": ")
-
+	orderedSyllables := make(map[string][]string)
 	for i := 0; i < numberOfSyllables; i++ {
 		firstLetterInSyllable, _ := utf8.DecodeRuneInString(syllables[i])
-		if letter == string(firstLetterInSyllable) {
-			console.Writeln(syllables[i])
+		orderedSyllables[string(firstLetterInSyllable)]= append(orderedSyllables[string(firstLetterInSyllable)], syllables[i])
 		}
-	}
+	console.Writeln("Строки, начинающиеся с ", letter, ": ")
+	console.Writeln(orderedSyllables[letter])
 }
+
+
+//data := make(map[string][]string)
+//
+//data["a"] = append(data["a"], "abc")
+//data["a"] = append(data["a"], "abd")
+//data["a"] = append(data["a"], "abk")
+//
+//data["b"] = append(data["b"], "bbd")
