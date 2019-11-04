@@ -2,7 +2,7 @@ package main
 
 import (
 	"../base/console"
-	"../base/rune"
+	"../base/cast"
 )
 
 func main() {
