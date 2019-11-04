@@ -4,7 +4,7 @@ import "../base/console"
 import "../base/rand"
 import "../base/math"
 
-func main (){
+func main() {
 	var random int
 	random = rand.RandomInt(5, 15)
 	console.Writeln("Рандомное число = ", random)
@@ -36,4 +36,3 @@ func main (){
 		}
 	}
 }
-

@@ -3,7 +3,7 @@ package main
 import "../base/console"
 import "../base/rand"
 
-func main () {
+func main() {
 	var number int
 
 	number = GetTheRandomNumber()
@@ -29,7 +29,7 @@ func main () {
 	}
 }
 
-func GetTheRandomNumber() int{
+func GetTheRandomNumber() int {
 	period := rand.RandomInt(0, 1)
 
 	if period == 0 {

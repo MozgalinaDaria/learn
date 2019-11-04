@@ -21,7 +21,7 @@ func main() {
 		newNumber = number
 		AbsolutValueOfDegree = int(math.Abs(float64(degree)))
 
-		for i := 0; i <= AbsolutValueOfDegree - 2; i++ {
+		for i := 0; i <= AbsolutValueOfDegree-2; i++ {
 			newNumber *= number
 		}
 		if degree > 0 {

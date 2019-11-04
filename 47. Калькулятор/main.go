@@ -1,15 +1,15 @@
 package main
 
 import (
-	"../base/console"
 	"../base/cast"
+	"../base/console"
 )
 
 func main() {
-	var equal, number [] rune
+	var equal, number []rune
 	var i int
 
-	equal = [] rune(console.ReadString("Введите пример вида: число, знак, число через пробел: "))
+	equal = []rune(console.ReadString("Введите пример вида: число, знак, число через пробел: "))
 	length := len(equal)
 
 	for i = 0; i < length; i++ {
@@ -20,10 +20,10 @@ func main() {
 		}
 	}
 
-	numberFirst := cast.CastRuneToInt(number)
-	operation := equal[i + 1]
-	number = (equal[i+3:length])
-	numberSecond := cast.CastRuneToInt(number)
+	numberFirst := cast.RuneToInt(number)
+	operation := equal[i+1]
+	number = (equal[i+3 : length])
+	numberSecond := cast.RuneToInt(number)
 
 	switch operation {
 	case '+':

@@ -1,8 +1,8 @@
-package Examples
+package examples
 
 import "fmt"
 
-func main() {
+func hashmap() {
 	var key string
 	var value int
 	var exists bool

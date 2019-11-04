@@ -12,7 +12,7 @@ func main() {
 	for ; number != 0; number = number / 10 {
 		figure := number % 10
 
-		if figure % 2 == 0 {
+		if figure%2 == 0 {
 			even += 1
 		} else {
 			odd += 1

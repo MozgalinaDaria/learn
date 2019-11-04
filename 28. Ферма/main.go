@@ -2,7 +2,7 @@ package main
 
 import "../base/console"
 
-func main(){
+func main() {
 	var n int
 
 	n = console.ReadInt("Введите степень n: ")

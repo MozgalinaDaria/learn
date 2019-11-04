@@ -1,5 +1,5 @@
 package math
 
-func IsOdd(a int)bool {
-	return a | 1 == a
+func IsOdd(a int) bool {
+	return a|1 == a
 }

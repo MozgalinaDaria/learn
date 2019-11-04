@@ -4,6 +4,7 @@ import (
 	"../base/console"
 	"unicode/utf8"
 )
+
 func main() {
 	var number string
 	var figureToRemove string
@@ -21,14 +22,14 @@ func main() {
 		number = number[size:] //Сдвигаем строку вправо на столько байт, сколько было в предыдущем, уже обработанном символе
 	}
 
-//	str :=  "bd фыва"
-//
-//	for len(str) > 0 {
-//		r, size := utf8.DecodeRuneInString(str) // Возвращает первый символ и его размер в байтах
-//		console.Writeln(str)
-//		console.Writeln(string(r), size)
-//		console.Writeln()
-//
-//		str = str[size:]
-//	}
+	//	str :=  "bd фыва"
+	//
+	//	for len(str) > 0 {
+	//		r, size := utf8.DecodeRuneInString(str) // Возвращает первый символ и его размер в байтах
+	//		console.Writeln(str)
+	//		console.Writeln(string(r), size)
+	//		console.Writeln()
+	//
+	//		str = str[size:]
+	//	}
 }

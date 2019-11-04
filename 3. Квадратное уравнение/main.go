@@ -33,5 +33,5 @@ func main() {
 }
 
 func Discriminant(a, b, c float64) float64 {
-	return b * b - 4 * a * c
+	return b*b - 4*a*c
 }

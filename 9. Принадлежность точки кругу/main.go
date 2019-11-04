@@ -29,6 +29,6 @@ func main() {
 func getDistanceBetweenPoints(x1, y1, x2, y2 float64) float64 {
 	var distanceSquared float64
 
-	distanceSquared = (x1 - x2) * (x1 - x2) + (y1 - y2)  * (y1 - y2)
+	distanceSquared = (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2)
 	return math.Pow(distanceSquared, 0.5)
 }

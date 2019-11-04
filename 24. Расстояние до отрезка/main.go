@@ -7,7 +7,7 @@ import (
 
 const PointIsInSegment = 0
 const PointIsToTheLeftOfSegment = 1
-const PointIsToTheRightOfSegment = - 1
+const PointIsToTheRightOfSegment = -1
 
 func main() {
 	var xFirst, хSecond, yFirst, ySecond, x, y float64

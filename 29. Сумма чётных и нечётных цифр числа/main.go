@@ -5,13 +5,13 @@ import (
 	"math"
 )
 
-func main()  {
+func main() {
 	var number, figure, sumOfEven, sumOfOdd int
 
 	number = console.ReadInt("Введите число: ")
-	for ; number != 0; number = number / 10{
+	for ; number != 0; number = number / 10 {
 		figure = number % 10
-		if figure % 2 == 0{
+		if figure%2 == 0 {
 			sumOfEven = sumOfEven + figure
 		} else {
 			sumOfOdd = sumOfOdd + figure

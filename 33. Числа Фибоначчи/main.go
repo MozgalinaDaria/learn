@@ -23,7 +23,7 @@ func main() {
 		second = 1
 		console.Write("Числа Фибоначчи: ", first, " ", second, " ")
 
-		for i:= 0; i <= count - 3; i++ {
+		for i := 0; i <= count-3; i++ {
 			next = first + second
 			console.Write(next, " ")
 			first = second

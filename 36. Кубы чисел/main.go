@@ -12,6 +12,6 @@ func main() {
 	console.Writeln("Кубы чисел от ", first, "до ", second, " : ")
 
 	for i := first; i <= second; i++ {
-	console.Write(i * i * i, " ")
+		console.Write(i*i*i, " ")
 	}
 }

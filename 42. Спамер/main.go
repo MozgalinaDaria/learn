@@ -21,7 +21,7 @@ func main() {
 
 	for key, value = range logins {
 		if value > 1 {
-		console.Write(key, " ")
+			console.Write(key, " ")
 		}
 	}
 }

@@ -1,8 +1,8 @@
 package main
 
 import (
-"../base/console"
-"../base/rand"
+	"../base/console"
+	"../base/rand"
 	"time"
 )
 
@@ -19,10 +19,10 @@ func main() {
 			sumFromTenCycle += j
 		}
 	}
-	var endTimeCycle  =  time.Since(startTimeCycle)
+	var endTimeCycle = time.Since(startTimeCycle)
 
-	console.Writeln("Посчитано в цикле. Сумма всех чисел от 10 до ", number, " = ", sumFromTenCycle / i,
-	"; время обработки цикла, сек = ", endTimeCycle.Seconds())
+	console.Writeln("Посчитано в цикле. Сумма всех чисел от 10 до ", number, " = ", sumFromTenCycle/i,
+		"; время обработки цикла, сек = ", endTimeCycle.Seconds())
 
 	var startTime = time.Now()
 
@@ -34,12 +34,11 @@ func main() {
 	var endTimeFormula = time.Since(startTime)
 
 	console.Writeln("Посчитано по формуле арифметической прогрессии. Сумма всех чисел от 10 до ", number, " = ",
-	sumFromTenProgression, "; время обработки формулы, сек = ", endTimeFormula.Seconds())
+		sumFromTenProgression, "; время обработки формулы, сек = ", endTimeFormula.Seconds())
 
-	if endTimeCycle > endTimeFormula  {
+	if endTimeCycle > endTimeFormula {
 		console.Writeln("Цикл выполнялся дольше арифметической прогрессии")
 	} else {
 		console.Writeln("Цикл выполнялся быстрее арифметической прогрессии")
 	}
 }
-
