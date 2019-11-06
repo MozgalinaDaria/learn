@@ -4,15 +4,14 @@ import "../base/console"
 import "math"
 
 func main() {
-	var centrX, centrY, radius, pointX, pointY, distanceBetweenPoint float64
 
-	centrX = console.ReadFloat("Введите координату центра окружности по оси ОХ")
-	centrY = console.ReadFloat("Введите координату центра окружности по оси ОY")
-	radius = console.ReadFloat("Введите радиус")
-	pointX = console.ReadFloat("Введите координаты точки по оси OX")
-	pointY = console.ReadFloat("Введите координаты точки по оси OY")
+	centrX := console.ReadFloat("Введите координату центра окружности по оси ОХ: ")
+	centrY := console.ReadFloat("Введите координату центра окружности по оси ОY: ")
+	radius := console.ReadFloat("Введите радиус: ")
+	pointX := console.ReadFloat("Введите координаты точки по оси OX: ")
+	pointY := console.ReadFloat("Введите координаты точки по оси OY: ")
 
-	distanceBetweenPoint = getDistanceBetweenPoints(centrX, centrY, pointX, pointY)
+	distanceBetweenPoint := getDistanceBetweenPoints(centrX, centrY, pointX, pointY)
 	if distanceBetweenPoint < radius {
 		console.Writeln("Точка лежит внутри окружности")
 		return

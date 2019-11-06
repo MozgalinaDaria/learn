@@ -6,56 +6,85 @@ import "../base/console"
 // TODO Функция должна возвращать константы (своя константа для каждой ситуации)
 // TODO func должна определять что вывести пользователю через switch/case
 
-func main() {
-	var x, y int
+const BetweenSecondAndFirstQuarters = 1
+const BetweenThirdAndFourthQuarters = 2
+const InFirstQuarter = 3
+const BetweenFirstAndFourthQuarters = 4
+const InFourthQuarter = 5
+const InThirdQuarter = 6
+const BetweenSecondAndThirdQuarters = 7
+const InSecondQuarter = 8
+const OnBorderOfAllQuarters = 9
 
-	console.Writeln("Введите координаты точки по оси Х")
-	x = console.ReadInt()
-	console.Writeln("Введите координаты точки по оси Y")
-	y = console.ReadInt()
+func main() {
+
+	x := console.ReadInt("Введите координаты точки по оси Х: ")
+	y := console.ReadInt("Введите координаты точки по оси Y: ")
+
+	switch DetectPosition(x, y) {
+	case 1:
+		console.Writeln("Координата находится на границе 2-й и 1-ой четвертей")
+	case 2:
+		console.Writeln("Координата находится на границе 3-ей и 4-ой четвертей")
+	case 3:
+		console.Writeln("Координата находится в 1-й четверти")
+	case 4:
+		console.Writeln("Координата находится на границе 1-й и 4-й четвертей")
+	case 5:
+		console.Writeln("Координата находится в 4-й четверти")
+	case 6:
+		console.Writeln("Координата находится в 3-ей четвертей")
+	case 7:
+		console.Writeln("Координата находится на границе 2-й и 3-й четвертей")
+	case 8:
+		console.Writeln("Координата находится во 2-й четверти")
+	case 9:
+		console.Writeln("Координата находится на границе всех четырех четвертей")
+	}
+
+}
+
+func DetectPosition(x, y int) int {
 
 	if x == 0 {
 		if y > 0 {
-			console.Writeln("Координата находится на границе 2-й и 1-ой четвертей")
-			return
+
+			return BetweenSecondAndFirstQuarters
 		}
 
 		if y < 0 {
-			console.Writeln("Координата находится на границе 3-ей и 4-ой четвертей")
-			return
+
+			return BetweenThirdAndFourthQuarters
 		}
 	}
 
 	if x > 0 {
 		if y > 0 {
-			console.Writeln("Координата находится в 1-й четверти")
-			return
+
+			return InFirstQuarter
 		}
 
 		if y == 0 {
-			console.Writeln("Координата находится на границе 1-й и 4-й четвертей")
-			return
+
+			return BetweenFirstAndFourthQuarters
 		}
 
-		console.Writeln("Координата находится в 4-й четверти")
+		return InFourthQuarter
 	}
 
 	if x < 0 {
 		if y < 0 {
-			console.Writeln("Координата находится в 3-ей четвертей")
-			return
+
+			return InThirdQuarter
 		}
 
 		if y == 0 {
-			console.Writeln("Координата находится на границе 2-й и 3-й четвертей")
-			return
+
+			return BetweenSecondAndThirdQuarters
 		}
 
-		console.Writeln("Координата находится во 2-й четверти")
+		return InSecondQuarter
 	}
 
-	if x == 0 && y == 0 {
-		console.Writeln("Координата находится на границе всех четырех четвертей")
-		return
-	}
+	return OnBorderOfAllQuarters
 }

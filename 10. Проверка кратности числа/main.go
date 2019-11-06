@@ -3,10 +3,9 @@ package main
 import "../base/console"
 
 func main() {
-	var a, b int
 
-	a = console.ReadInt("Введите первое число: ")
-	b = console.ReadInt("Введите второе число: ")
+	a := console.ReadInt("Введите первое число: ")
+	b := console.ReadInt("Введите второе число: ")
 
 	if b == 0 {
 		console.Writeln("Делить на ноль нельзя! Начните заново")

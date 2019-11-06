@@ -3,11 +3,10 @@ package main
 import "../base/console"
 
 func main() {
-	var a, b, c int
 
-	a = console.ReadInt("Введите первое число")
-	b = console.ReadInt("Введите второе число")
-	c = console.ReadInt("Введите третье число")
+	a := console.ReadInt("Введите первое число: ")
+	b := console.ReadInt("Введите второе число: ")
+	c := console.ReadInt("Введите третье число: ")
 
 	console.Writeln("Наибольшее из 3 чисел = ", max(a, b, c))
 }

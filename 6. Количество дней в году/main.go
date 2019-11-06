@@ -3,9 +3,8 @@ package main
 import "../base/console"
 
 func main() {
-	var year int
 
-	year = console.ReadInt("Введите год")
+	year := console.ReadInt("Введите год")
 
 	if isLeap(year) {
 		console.Writeln("Год ", year, " - високосный, в нем  365 дней")

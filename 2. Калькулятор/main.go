@@ -5,12 +5,10 @@ import (
 )
 
 func main() {
-	var a, b int
-	var operation string
 
-	a = console.ReadInt("Введите первое число: ")
-	operation = console.ReadString("Введите знак требуемой операции: ")
-	b = console.ReadInt("Введите второе число: ")
+	a := console.ReadInt("Введите первое число: ")
+	operation := console.ReadString("Введите знак требуемой операции: ")
+	b := console.ReadInt("Введите второе число: ")
 
 	if operation == "+" {
 		Output(a, operation, b, Sum(a, b))

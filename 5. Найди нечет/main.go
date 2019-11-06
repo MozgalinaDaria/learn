@@ -3,11 +3,10 @@ package main
 import "../base/console"
 
 func main() {
-	var first, second int
 
 	console.Writeln("Введите 2 числа с разной четностью: ")
-	first = console.ReadInt()
-	second = console.ReadInt()
+	first := console.ReadInt()
+	second := console.ReadInt()
 
 	if isOdd(first) {
 		console.Write("Нечетное число = ", first)
