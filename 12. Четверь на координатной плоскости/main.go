@@ -41,7 +41,6 @@ func main() {
 	case 9:
 		console.Writeln("Координата находится на границе всех четырех четвертей")
 	}
-
 }
 
 func DetectPosition(x, y int) int {

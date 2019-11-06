@@ -9,49 +9,56 @@ const Circle = 4
 const Pi = 3.14
 
 func main() {
-	var figure float64
 
-	console.Writeln("Введите номер фигуры: ", Square, " - квадрат, ", Rectangle, " - прямоугольник, ",
+	figure := console.ReadFloat("Введите номер фигуры: ", Square, " - квадрат, ", Rectangle, " - прямоугольник, ",
 		Triangle, " - треугольник, ", Circle, " - круг")
-	figure = console.ReadFloat()
 
-	console.Writeln("Площадь фигуры = ", GetSquare(figure))
+	console.Writeln("Площадь фигуры = ", GetArea(figure))
 }
 
-func GetSquare(figure float64) float64 {
+func GetArea(figure float64) float64 {
 	// TODO вынести расчёт площади для каждой фигуры в отдельную функцию
 
 	switch figure {
 	case Square:
-		var length float64
-
-		console.Writeln("Введите длину стороны")
-		length = console.ReadFloat()
-		return length * length
-
+		GetSquareArea()
 	case Rectangle:
-		var length, width float64
-
-		console.Writeln("Введите длину и ширину")
-		length = console.ReadFloat()
-		width = console.ReadFloat()
-		return length * width
-
+		GetRectangleArea()
 	case Triangle:
-		var length, height float64
-
-		console.Writeln("Введите длину основания и высоту")
-		length = console.ReadFloat()
-		height = console.ReadFloat()
-		return 0.5 * length * height
-
+		GetTriangleArea()
 	case Circle:
-		var r float64
-
-		console.Writeln("Введите длину радиуса")
-		r = console.ReadFloat()
-		return Pi * r * r
+		GetCircleArea()
 	}
 
 	panic("Неизвестная фигура")
+}
+
+func GetSquareArea() float64 {
+
+	length := console.ReadFloat("Введите длину стороны: ")
+
+	return length * length
+}
+
+func GetRectangleArea() float64 {
+
+	length := console.ReadFloat("Введите длину: ")
+	width := console.ReadFloat("Введите ширину: ")
+
+	return length * width
+}
+
+func GetTriangleArea() float64 {
+
+	length := console.ReadFloat("Введите длину основания: ")
+	height := console.ReadFloat("Введите высоту: ")
+
+	return 0.5 * length * height
+}
+
+func GetCircleArea() float64 {
+
+	r := console.ReadFloat("Введите длину радиуса: ")
+
+	return Pi * r * r
 }
