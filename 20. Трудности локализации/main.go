@@ -3,10 +3,8 @@ package main
 import "../base/console"
 
 func main() {
-	var count int
 
-	console.Writeln("Введите количество воинов")
-	count = console.ReadInt()
+	count := console.ReadInt("Введите количество воинов")
 
 	switch {
 	case count <= 4:

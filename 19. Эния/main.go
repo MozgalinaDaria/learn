@@ -3,12 +3,10 @@ package main
 import "../base/console"
 
 func main() {
-	var a, b, n int
 
-	console.Writeln("Введите длину и ширину панелей, количество панелей")
-	a = console.ReadInt()
-	b = console.ReadInt()
-	n = console.ReadInt()
+	a := console.ReadInt("Введите длину панелей: ")
+	b := console.ReadInt("Введите ширину панелей: ")
+	n := console.ReadInt("Введите количество панелей: ")
 
 	console.Writeln("Необходимый вес = ", a*b*n*2)
 }
