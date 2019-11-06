@@ -22,23 +22,23 @@ func main() {
 	y := console.ReadInt("Введите координаты точки по оси Y: ")
 
 	switch DetectPosition(x, y) {
-	case 1:
+	case BetweenSecondAndFirstQuarters:
 		console.Writeln("Координата находится на границе 2-й и 1-ой четвертей")
-	case 2:
+	case BetweenThirdAndFourthQuarters:
 		console.Writeln("Координата находится на границе 3-ей и 4-ой четвертей")
-	case 3:
+	case InFirstQuarter:
 		console.Writeln("Координата находится в 1-й четверти")
-	case 4:
+	case BetweenFirstAndFourthQuarters:
 		console.Writeln("Координата находится на границе 1-й и 4-й четвертей")
-	case 5:
+	case InFourthQuarter:
 		console.Writeln("Координата находится в 4-й четверти")
-	case 6:
+	case InThirdQuarter:
 		console.Writeln("Координата находится в 3-ей четвертей")
-	case 7:
+	case BetweenSecondAndThirdQuarters:
 		console.Writeln("Координата находится на границе 2-й и 3-й четвертей")
-	case 8:
+	case InSecondQuarter:
 		console.Writeln("Координата находится во 2-й четверти")
-	case 9:
+	case OnBorderOfAllQuarters:
 		console.Writeln("Координата находится на границе всех четырех четвертей")
 	}
 }
@@ -47,24 +47,20 @@ func DetectPosition(x, y int) int {
 
 	if x == 0 {
 		if y > 0 {
-
 			return BetweenSecondAndFirstQuarters
 		}
 
 		if y < 0 {
-
 			return BetweenThirdAndFourthQuarters
 		}
 	}
 
 	if x > 0 {
 		if y > 0 {
-
 			return InFirstQuarter
 		}
 
 		if y == 0 {
-
 			return BetweenFirstAndFourthQuarters
 		}
 
@@ -73,12 +69,10 @@ func DetectPosition(x, y int) int {
 
 	if x < 0 {
 		if y < 0 {
-
 			return InThirdQuarter
 		}
 
 		if y == 0 {
-
 			return BetweenSecondAndThirdQuarters
 		}
 
