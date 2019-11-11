@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-
 	sum := console.ReadFloat("Введите исходную сумма вклада: ")
 	percent := console.ReadFloat("Введите процентную ставка вклада: ")
 	months := console.ReadFloat("Введите срок вклада в месяцах: ")

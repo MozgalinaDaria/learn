@@ -22,7 +22,7 @@ func main() {
 
 	numberFirst := cast.RuneToInt(number)
 	operation := equal[i+1]
-	number = (equal[i+3 : length])
+	number = (equal[i+3:])
 	numberSecond := cast.RuneToInt(number)
 
 	switch operation {
