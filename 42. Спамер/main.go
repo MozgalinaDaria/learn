@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	var key string
+	var key, login string
 	var value int
 	var numberOfLogins int
 
@@ -14,7 +14,8 @@ func main() {
 	numberOfLogins = console.ReadInt("Введите общее количество логинов: ")
 
 	for i := 0; i < numberOfLogins; i++ {
-		logins[console.ReadString("Введите логин: ")]++
+		login = console.ReadString("Введите логин: ")
+		logins[login]++
 	}
 
 	console.Writeln("Логины спамеров: ")

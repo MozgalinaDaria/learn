@@ -6,12 +6,14 @@ import (
 
 func main() {
 	var countOfRepeats int
+	var name string
 
 	numberOfShops := console.ReadInt("Введите общее количество магазинов: ")
 	namesOfShops := make(map[string]int)
 
 	for i := 0; i < numberOfShops; i++ {
-		namesOfShops[console.ReadString("Введите название магазина: ")]++
+		name = console.ReadString("Введите название магазина: ")
+		namesOfShops[name]++
 	}
 
 	for _, value := range namesOfShops {

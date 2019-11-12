@@ -40,7 +40,7 @@ func Calculator(example []rune) {
 
 	operation := example [i]
 	numberSecond := (example [i+1 : length-1])
-	console.Writeln(operation, '+')
+
 	switch operation {
 	case '+':
 		total = cast.RuneToInt(numberFirst) + cast.RuneToInt(numberSecond)
