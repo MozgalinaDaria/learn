@@ -10,8 +10,12 @@ const CommandLogin = "login"
 const CommandLogout = "logout"
 const CommandExit = "exit"
 
-var logins = make(map[string]string)
-var IsOnline = make(map[string]bool)
+type User struct {
+	Password string
+	Online   bool
+}
+
+var users = make(map[string]User)
 
 func main() {
 	var input []string
@@ -38,39 +42,44 @@ func main() {
 }
 
 func Register(login, password string) string {
-	if _, exists := logins[login]; exists {
+	if _, exists := users[login]; exists {
 		return "fail: user already exists"
 	}
 
-	logins[login] = password
+	users[login] = User{Password: password, Online: false}
 	return "success: new user added"
 }
 
 func LogIn(login, password string) string {
-	if _, exists := logins[login]; !exists {
+	if _, exists := users[login]; !exists {
 		return "fail: no such user"
 	}
 
-	if logins[login] != password {
+	if users[login].Password != password {
 		return "fail: incorrect password"
 	}
 
-	if IsOnline[login] {
+	if users[login].Online {
 		return "fail: already logged in"
 	}
 
-	IsOnline[login] = true
+	user := users[login]
+	user.Online = true
+	users[login] = user
 	return "success: user logged in"
 }
 
 func LogOut(login string) string {
-	if _, exists := logins[login]; !exists {
+	if _, exists := users[login]; !exists {
 		return "fail: no such user"
 	}
 
-	if IsOnline[login] == false {
+	if !users[login].Online {
 		return "fail: already logged out"
 	}
-	IsOnline[login] = false
+
+	user := users[login]
+	user.Online = false
+	users[login] = user
 	return "success: user logged out"
 }
