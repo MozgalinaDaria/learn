@@ -23,11 +23,9 @@ func main() {
 
 			if lengthOfWord < balanceOfSymbolsInString {
 				balanceOfSymbolsInString = balanceOfSymbolsInString - lengthOfWord - 1
-			}
-			if lengthOfWord == balanceOfSymbolsInString {
+			} else if lengthOfWord == balanceOfSymbolsInString {
 				balanceOfSymbolsInString = 0
-			}
-			if lengthOfWord > balanceOfSymbolsInString {
+			} else if lengthOfWord > balanceOfSymbolsInString {
 				balanceOfStrings -= 1
 				balanceOfSymbolsInString = numberOfSymbolsInStrings
 			}
