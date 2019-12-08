@@ -17,10 +17,10 @@ func main() {
 	}
 }
 
-func getDividers(numberToFindDividers int) []int{
+func getDividers(numberToFindDividers int) []int {
 	var secondDivider int
 	var keys [] int
-	var specialDividers = [4] int {11, 13, 17, 19}
+	var specialDividers = [4] int{11, 13, 17, 19}
 
 	dividers := make(map[int]int)
 
@@ -29,7 +29,7 @@ func getDividers(numberToFindDividers int) []int{
 			secondDivider = numberToFindDividers / j
 			dividers[j]++
 			dividers[secondDivider]++
-			}
+		}
 	}
 
 	for i := 0; i < 4; i++ {
@@ -46,4 +46,3 @@ func getDividers(numberToFindDividers int) []int{
 
 	return keys
 }
-
