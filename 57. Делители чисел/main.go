@@ -5,6 +5,8 @@ import (
 	"fmt"
 )
 
+//TODO Mozgalina: задача решена неверно. Делиться только сами на себя помимо 11 и тп может, например, 37. Поэтому решить задачу полным перебором
+
 func main() {
 	var min, max, numberToFindDividers int
 
