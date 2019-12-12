@@ -11,7 +11,7 @@ func main() {
 }
 
 func SyracuseHypothesis(number int) {
-	for number != 1 {
+	for number > 1 {
 		switch CheckParity(number) {
 		case IsEven:
 			number /= 2
