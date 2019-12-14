@@ -3,7 +3,6 @@ package main
 import "../base/console"
 
 func main() {
-
 	console.Writeln("Введите a, b")
 	a := console.ReadFloat("Введите a: ")
 	b := console.ReadFloat("Введите b: ")

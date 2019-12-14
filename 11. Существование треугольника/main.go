@@ -3,7 +3,6 @@ package main
 import "../base/console"
 
 func main() {
-
 	console.Writeln("Введите длины каждой из трех сторон треугольника: ")
 	a := console.ReadInt()
 	b := console.ReadInt()

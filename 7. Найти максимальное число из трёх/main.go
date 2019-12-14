@@ -3,7 +3,6 @@ package main
 import "../base/console"
 
 func main() {
-
 	a := console.ReadInt("Введите первое число: ")
 	b := console.ReadInt("Введите второе число: ")
 	c := console.ReadInt("Введите третье число: ")

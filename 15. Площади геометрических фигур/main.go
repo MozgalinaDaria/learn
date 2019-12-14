@@ -9,16 +9,18 @@ const Circle = 4
 const Pi = 3.14
 
 func main() {
-
-	figure := console.ReadFloat("Введите номер фигуры: ", Square, " - квадрат, ", Rectangle, " - прямоугольник, ",
-		Triangle, " - треугольник, ", Circle, " - круг")
+	figure := console.ReadFloat(
+		"Введите номер фигуры: ",
+		Square, " - квадрат, ",
+		Rectangle, " - прямоугольник, ",
+		Triangle, " - треугольник, ",
+		Circle, " - круг",
+	)
 
 	console.Writeln("Площадь фигуры = ", GetArea(figure))
 }
 
 func GetArea(figure float64) float64 {
-	// TODO вынести расчёт площади для каждой фигуры в отдельную функцию
-
 	switch figure {
 	case Square:
 		GetSquareArea()
@@ -34,14 +36,12 @@ func GetArea(figure float64) float64 {
 }
 
 func GetSquareArea() float64 {
-
 	length := console.ReadFloat("Введите длину стороны: ")
 
 	return length * length
 }
 
 func GetRectangleArea() float64 {
-
 	length := console.ReadFloat("Введите длину: ")
 	width := console.ReadFloat("Введите ширину: ")
 
@@ -49,7 +49,6 @@ func GetRectangleArea() float64 {
 }
 
 func GetTriangleArea() float64 {
-
 	length := console.ReadFloat("Введите длину основания: ")
 	height := console.ReadFloat("Введите высоту: ")
 
@@ -57,7 +56,6 @@ func GetTriangleArea() float64 {
 }
 
 func GetCircleArea() float64 {
-
 	r := console.ReadFloat("Введите длину радиуса: ")
 
 	return Pi * r * r

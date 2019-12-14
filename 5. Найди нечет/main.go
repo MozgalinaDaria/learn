@@ -3,12 +3,11 @@ package main
 import "../base/console"
 
 func main() {
-
 	console.Writeln("Введите 2 числа с разной четностью: ")
 	first := console.ReadInt()
 	second := console.ReadInt()
 
-	if isOdd(first) {
+	if IsOdd(first) {
 		console.Write("Нечетное число = ", first)
 		return
 	}
@@ -16,6 +15,6 @@ func main() {
 	console.Write("Нечетное число = ", second)
 }
 
-func isOdd(number int) bool {
+func IsOdd(number int) bool {
 	return (number | 1) == number
 }

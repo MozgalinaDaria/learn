@@ -8,9 +8,13 @@ const Triangle = 3
 const Circle = 4
 
 func main() {
-
-	number := console.ReadInt("Введите номер фигуры: ", Square, " - квадрат, ", Rectangle, " - прямоугольник, ", Triangle, " - треугольник, ",
-		Circle, " - круг")
+	number := console.ReadInt(
+		"Введите номер фигуры: ",
+		Square, " - квадрат, ",
+		Rectangle, " - прямоугольник, ",
+		Triangle, " - треугольник, ",
+		Circle, " - круг",
+	)
 
 	console.Write("Вами выбран ")
 	switch number {
