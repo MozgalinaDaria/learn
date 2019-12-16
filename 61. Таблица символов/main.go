@@ -11,7 +11,6 @@ func main() {
 			number++
 		}
 		console.Writeln()
-
 	}
 	console.Writeln(number, " ", string(number))
 }
