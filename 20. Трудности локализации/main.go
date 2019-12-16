@@ -3,7 +3,6 @@ package main
 import "../base/console"
 
 func main() {
-
 	count := console.ReadInt("Введите количество воинов")
 
 	switch {

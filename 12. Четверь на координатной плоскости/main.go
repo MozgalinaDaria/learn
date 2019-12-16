@@ -17,7 +17,6 @@ const InSecondQuarter = 8
 const OnBorderOfAllQuarters = 9
 
 func main() {
-
 	x := console.ReadInt("Введите координаты точки по оси Х: ")
 	y := console.ReadInt("Введите координаты точки по оси Y: ")
 
@@ -44,7 +43,6 @@ func main() {
 }
 
 func DetectPosition(x, y int) int {
-
 	if x == 0 {
 		if y > 0 {
 			return BetweenSecondAndFirstQuarters

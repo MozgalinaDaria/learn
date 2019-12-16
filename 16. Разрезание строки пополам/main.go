@@ -3,7 +3,6 @@ package main
 import "../base/console"
 
 func main() {
-
 	s := console.ReadString("Напишите предложение")
 	length := len(s)
 

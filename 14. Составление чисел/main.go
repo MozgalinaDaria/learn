@@ -18,7 +18,6 @@ func main() {
 }
 
 func GetFigure(number int) (int, int, int) {
-
 	figure3 := number % 10
 	figure2 := (number % 100) / 10
 	figure1 := number / 100
