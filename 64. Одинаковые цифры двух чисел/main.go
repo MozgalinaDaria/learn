@@ -2,41 +2,42 @@ package main
 
 import (
 	"../base/console"
-	"strings"
 )
 
-//TODO: спросить Артема, как решить задачу иначе (баз строк и hash-map)
+const FiguresCount = 10
+
+type figures [FiguresCount]bool
 
 func main() {
-	numFirst := console.ReadString("Введите первое число: ")
-	numSecond := console.ReadString("Введите второе число: ")
+	numFirst := NumberToFigures(console.ReadInt("Введите первое число: "))
+	numSecond := NumberToFigures(console.ReadInt("Введите второе число: "))
+	result := CrossFigures(numFirst, numSecond)
 
 	console.Writeln("Повторяющиеся цифры в обоих числах: ")
-	console.Writeln(compareStrings(numFirst, numSecond))
-}
-
-func compareStrings(a, b string) []string {
-	var isContained bool
-	var commonStrings = make(map[string]int)
-	var uniccommonStrings []string
-
-	lengthA := len(a)
-	stringToSplit := getStrings(b)
-
-	for i := 0; i < lengthA; i++ {
-		isContained = strings.Contains(a, stringToSplit[i])
-
-		if isContained {
-			commonStrings[stringToSplit[i]]++
+	for i := 0; i < FiguresCount; i++ {
+		if result[i] {
+			console.Write(i, " ")
 		}
 	}
-
-	for key := range commonStrings {
-		uniccommonStrings = append(uniccommonStrings, key)
-	}
-	return uniccommonStrings
 }
 
-func getStrings(a string) []string {
-	return strings.Split(a, "")
+func CrossFigures(first, second figures) figures {
+	var result figures
+
+	for i := 0; i < FiguresCount; i++ {
+		result[i] = first[i] && second[i]
+	}
+
+	return result
+}
+
+func NumberToFigures(number int) figures {
+	var result figures
+
+	for number > 0 {
+		result[number%10] = true
+		number /= 10
+	}
+
+	return result
 }
