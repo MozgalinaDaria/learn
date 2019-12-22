@@ -15,7 +15,7 @@ func main() {
 
 	console.Writeln("Компьютер загадал число, попробуйте угадать его")
 
-	for randomNumber != usersNumber{
+	for randomNumber != usersNumber {
 		usersNumber = console.ReadInt("Какое число загадал компьютер? ")
 
 		switch compare(randomNumber, usersNumber) {
