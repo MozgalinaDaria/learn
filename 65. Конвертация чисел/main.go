@@ -5,15 +5,6 @@ import (
 	"strings"
 )
 
-type Node struct {
-	Value int
-}
-
-type Stack struct {
-	nodes []*Node
-	count int
-}
-
 func main() {
 	number := console.ReadString("Введите римское число для конвертации: ")
 	console.Writeln("Это соответствует арабскому числу: ", getArabicNumberFromLatinInt(convertLatinStrToInt(number)))
