@@ -2,61 +2,88 @@ package main
 
 import "../base/console"
 
-const Square = 1
-const Rectangle = 2
-const Triangle = 3
-const Circle = 4
+const SquareNumber = 1
+const RectangleNumber = 2
+const TriangleNumber = 3
+const CircleNumber = 4
 const Pi = 3.14
 
-func main() {
-	figure := console.ReadFloat(
-		"Введите номер фигуры: ",
-		Square, " - квадрат, ",
-		Rectangle, " - прямоугольник, ",
-		Triangle, " - треугольник, ",
-		Circle, " - круг",
-	)
-
-	console.Writeln("Площадь фигуры = ", GetArea(figure))
+type Square struct {
+	Length float64
 }
 
-func GetArea(figure float64) float64 {
-	switch figure {
-	case Square:
-		GetSquareArea()
-	case Rectangle:
-		GetRectangleArea()
-	case Triangle:
-		GetTriangleArea()
-	case Circle:
-		GetCircleArea()
+func (object *Square) GetArea() float64 {
+
+	return object.Length * object.Length
+}
+
+type Rectangle struct {
+	Height float64
+	Width  float64
+}
+
+func (object *Rectangle) GetArea() float64 {
+
+	return object.Height * object.Width
+}
+
+type Triangle struct {
+	Length float64
+	Height float64
+}
+
+func (object *Triangle) GetArea() float64 {
+
+	return 0.5 * object.Length * object.Height
+}
+
+type Circle struct {
+	Radius float64
+}
+
+func (object *Circle) GetArea() float64 {
+
+	return Pi * object.Radius * object.Radius
+}
+
+type Shape interface {
+	GetArea() float64
+}
+
+func MakeShape(figureNumber int) Shape {
+	switch figureNumber {
+	case SquareNumber:
+		length := console.ReadFloat("Введите длину стороны квадрата: ")
+		return &Square{Length: length}
+
+	case RectangleNumber:
+		height := console.ReadFloat("Введите высоту: ")
+		width := console.ReadFloat("Введите ширину: ")
+		return &Rectangle{Height: height, Width: width}
+
+	case TriangleNumber:
+		length := console.ReadFloat("Введите длину основания: ")
+		height := console.ReadFloat("Введите высоту: ")
+		return &Triangle{Length:length, Height:height}
+
+	case CircleNumber:
+		r := console.ReadFloat("Введите длину радиуса: ")
+		return &Circle{Radius:r}
 	}
 
 	panic("Неизвестная фигура")
 }
 
-func GetSquareArea() float64 {
-	length := console.ReadFloat("Введите длину стороны: ")
+func main() {
+	figureNumber := console.ReadInt(
+		"Введите номер фигуры: ",
+		SquareNumber, " - квадрат, ",
+		RectangleNumber, " - прямоугольник, ",
+		TriangleNumber, " - треугольник, ",
+		CircleNumber, " - круг",
+	)
 
-	return length * length
-}
+	figure := MakeShape(figureNumber)
 
-func GetRectangleArea() float64 {
-	length := console.ReadFloat("Введите длину: ")
-	width := console.ReadFloat("Введите ширину: ")
-
-	return length * width
-}
-
-func GetTriangleArea() float64 {
-	length := console.ReadFloat("Введите длину основания: ")
-	height := console.ReadFloat("Введите высоту: ")
-
-	return 0.5 * length * height
-}
-
-func GetCircleArea() float64 {
-	r := console.ReadFloat("Введите длину радиуса: ")
-
-	return Pi * r * r
+	console.Writeln("Площадь фигуры = ", figure.GetArea())
 }
