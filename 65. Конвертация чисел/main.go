@@ -33,7 +33,6 @@ func convertLatinStrToInt(number string) []int {
 			ArabicNumber = append(ArabicNumber, 1000)
 		}
 	}
-	console.Writeln(ArabicNumber)
 	return ArabicNumber
 }
 
